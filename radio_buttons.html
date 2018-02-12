@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio Buttons</title>
+	<script type="text/javascript">
+		function check_option(){
+			var yes_check = document.getElementById('renew_yes').checked;
+			var no_check = document.getElementById('renew_no').checked;
+
+			if(yes_check==false && no_check==false){
+				alert('Please select an option');
+				return false;
+			}
+
+			else{
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<form action="submission.html" method="post" onsubmit="return check_option();">
+		<p>Do you want to renew your membership?</p>
+		Yes <input type="radio" name="renew" value="yes" id="renew_yes"><br>
+		No <input type="radio" name="renew" value="no" id="renew_no"><br>
+		<input type="submit" name="submit">
+	</form>
+
+</body>
+</html>
