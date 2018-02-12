@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Form</title>
+	<script type="text/javascript">
+		
+		function enter_name(){
+			var para = document.getElementById('welcome');
+			var name = document.getElementById('name');
+
+			para.innerHTML = "Hi " + name.value + " Welcome to my site";
+		}
+	
+
+	</script>
+</head>
+<body>
+
+	<p id="welcome"></p>
+	<form>
+		Enter Your Name : <input type="text" id="name"/>
+		<input type="button" value="Enter" onclick="enter_name();"/>
+	</form>
+
+</body>
+</html>
