@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<script type="text/javascript">
+		
+		function check_form() {
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+
+			if(username=="" || password==""){
+				alert("Please fill all the Columns");
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<form action="submission.html" onsubmit="return check_form();">
+		username :  <input type="text" name="username" id="username">
+		password : <input type="password" name="password" id="password">
+		<input type="submit" name="submit">
+	</form>
+
+</body>
+</html>
