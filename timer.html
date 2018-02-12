@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Image</title>
+	<script type="text/javascript">
+		imgae_track = 's';
+		function change(){
+			var img = document.getElementById("scob");
+			if(imgae_track=='s'){
+				img.src = "scooby.jpg";
+				imgae_track = 'sc';
+			}
+			else{
+				img.src = "shaggy.jpg";
+				imgae_track='s';
+			}
+		}
+
+		 // setTimeout('change()',2000); //set timeout('function',time in mili seconds) but this will execute only one time
+		 setInterval('change()',2000); //this will change image continuously
+		 //if you want to stop changing use -> clearInterval() function
+
+
+
+	</script>
+</head>
+<body>
+
+	<img src="shaggy.jpg" id="scob" onclick="change();">
+
+</body>
+</html>
